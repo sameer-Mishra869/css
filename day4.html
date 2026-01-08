@@ -1,0 +1,212 @@
+<html>
+<head>
+    <title>HTML Practice Page</title>
+    <style>
+        /* Experimental CSS Practice — pure CSS only (no HTML changes) */
+        * { box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f3f6fb;
+            color: #0f172a;
+            margin: 40px auto;
+            padding: 28px;
+            max-width: 920px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 1. Main Character Energy (Heading) */
+        #mainHeading {
+            text-align: center;
+            font-size: 4rem;
+            margin: 8px 0 12px;
+            color: #081424;
+            text-shadow: 0 8px 30px rgba(4,18,47,0.18), 0 2px 6px rgba(4,18,47,0.08);
+            transition: color 240ms ease, transform 240ms ease;
+            letter-spacing: -1px;
+            text-transform: none; /* override any inline quirks */
+        }
+        #mainHeading:hover { color: #ff5c7c; transform: translateY(-4px); }
+
+        /* 2. Subheading but Make It Aesthetic */
+        h3 {
+            color: #b9d7e8 !important; /* override inline style */
+            letter-spacing: 2px;
+            opacity: 0.88;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        /* 3. Paragraph Glow-Up (first paragraph) */
+        .introParagraph {
+            background-color: rgba(255,255,255,0.92);
+            border-radius: 14px;
+            padding: 18px 22px;
+            line-height: 1.7;
+            margin: 18px 0;
+            box-shadow: 0 8px 30px rgba(20,40,80,0.06);
+        }
+
+        /* 4. “Important Info” but Dramatic */
+        #specialParagraph {
+            border: 4px solid #ff4d4d;
+            background-color: #fff4f6;
+            padding: 12px 14px;
+            display: inline-block;
+            transform: rotate(-1.8deg);
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(255,77,77,0.06);
+            margin: 12px 0;
+        }
+
+        /* 5. HR but Make It Fancy */
+        hr {
+            width: 40%;
+            height: 8px;
+            margin: 30px auto;
+            border: none !important; /* override inline border */
+            border-radius: 8px;
+            background: linear-gradient(90deg, #8ad3ff, #bca4ff);
+        }
+
+        /* 6. Pre Tag = Hacker Mode */
+        pre {
+            background-color: #0b1220;
+            color: #39ff14;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Courier New', monospace;
+            padding: 14px 16px;
+            border-radius: 8px;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.45);
+            overflow: auto;
+        }
+
+        /* 7. Unordered List = Pinterest Vibes */
+        ul.techList {
+            list-style: none;
+            display: flex;
+            gap: 12px;
+            padding: 12px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,255,0.7));
+            border-radius: 12px;
+            margin: 18px 0;
+        }
+        ul.techList li {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 999px;
+            box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+            font-weight: 600;
+        }
+
+        /* 8. Ordered List = Step-by-Step Boss */
+        ol#stepsList { list-style-type: upper-roman; font-weight: 700; margin: 18px 0 24px 1.2em; line-height: 1.8; }
+
+        /* 9. Link = Don’t Look Like a Link */
+        a.htmlLink { color: #6b7280 !important; text-decoration: none !important; transition: color 180ms ease; }
+        a.htmlLink:hover { color: #0b5fff !important; text-decoration: underline; }
+
+        /* 10. Div = Card UI */
+        div {
+            padding: 14px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(4,18,40,0.05);
+            border: 1px solid rgba(12,20,40,0.03);
+            background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(250,250,255,0.65));
+        }
+
+        /* 11. Span = Accent Word */
+        div span { color: #6a2b9b; font-size: 1.06em; font-weight: 700; }
+
+        /* 12 & 13. Button = Click Me or Else + Hover Chaos */
+        #submitBtn {
+            padding: 12px 22px;
+            border-radius: 999px;
+            background-color: #bde4a7 !important; /* override inline */
+            border: none;
+            font-weight: 700;
+            transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+            cursor: pointer;
+        }
+        #submitBtn:hover { background-color: #92d36b !important; box-shadow: 0 12px 30px rgba(14,75,31,0.14); transform: scale(1.06); }
+
+        /* 14. Footer but Low-Key */
+        footer.pageFooter { font-size: 0.9rem; color: #6b7280; text-align: center; margin-top: 26px; }
+
+        /* 15. Whole Page Vibe Check */
+        body > * { margin-left: auto; margin-right: auto; }
+        @media (max-width:520px) {
+            #mainHeading { font-size: 2.4rem; }
+            body { padding: 18px; margin: 20px auto; }
+            ul.techList { flex-direction: column; gap: 8px; }
+        }
+
+        /* gentle transitions for interactive elements */
+        #mainHeading, h3, .introParagraph, #specialParagraph, pre, ul.techList, ol#stepsList, a.htmlLink, div, #submitBtn, footer.pageFooter { transition: all 180ms ease; }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="mainHeading">HTML Practice Page</h1>
+
+    <h3 style="color: ivory;">Learning the basics of HTML</h3>
+
+    <p class="introParagraph">
+        <b>HTML</b> stands for <strong>HyperText Markup Language</strong>.
+        It is used to <i>create</i> and <em>structure</em> web pages.
+    </p>
+
+    <p id="specialParagraph">
+        HTML is very <mark>important</mark> for web development.<br>
+        Water formula is H<sub>2</sub>O and 2<sup>2</sup> = 4.
+    </p>
+
+    <hr style="border: 2px solid green;">
+
+    <pre style="color: brown;">
+This text
+    keeps spaces
+        and line breaks
+exactly as written.
+    </pre>
+
+    <ul class="techList">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <ol id="stepsList">
+        <li>Write HTML</li>
+        <li>Save file</li>
+        <li>Open in browser</li>
+    </ol>
+
+    <a href="https://www.w3schools.com"
+       target="_blank"
+       class="htmlLink"
+       style="color: red; text-decoration: none;">
+        Learn HTML from W3Schools
+    </a>
+
+    <br><br>
+
+    <div>
+        This is a <span style="color: purple; font-weight: bold;">container</span> example.
+    </div>
+
+    <br>
+
+    <button id="submitBtn" style="background-color: lightgreen;">
+        Submit
+    </button>
+
+    <br><br>
+
+    <footer class="pageFooter" style="font-size: small;">
+        © 2026 HTML Practice Page
+    </footer>
+
+</body>
+</html>
